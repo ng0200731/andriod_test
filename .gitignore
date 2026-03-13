@@ -1,0 +1,30 @@
+# Android
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+build/
+.gradle/
+local.properties
+*.iml
+.idea/
+*.log
+
+# Temporary files
+.tmp/
+*.db
+*.db-journal
+
+# Environment variables (contains API keys)
+.env
+
+# Google OAuth credentials
+credentials.json
+token.json
+
+# OS files
+.DS_Store
+Thumbs.db
