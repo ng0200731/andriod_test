@@ -1,10 +1,8 @@
 package com.newsapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private List<NewsArticle> articles = new ArrayList<>();
     private ExecutorService executor = Executors.newSingleThreadExecutor();
     private Handler mainHandler = new Handler(Looper.getMainLooper());
-    private Button btnOpenWebApp;
     
     // Replace with your actual API key
     private static final String API_KEY = "52692c2490044f5da607e13d07b062e1";
@@ -42,12 +39,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new NewsAdapter(articles);
         recyclerView.setAdapter(adapter);
-
-        btnOpenWebApp = findViewById(R.id.btnOpenWebApp);
-        btnOpenWebApp.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, WebAppActivity.class);
-            startActivity(intent);
-        });
 
         fetchNews();
     }

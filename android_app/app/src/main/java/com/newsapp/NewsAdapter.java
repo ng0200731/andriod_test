@@ -1,5 +1,6 @@
 package com.newsapp;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         holder.titleText.setText(article.getTitle());
         holder.descriptionText.setText(article.getDescription());
         holder.sourceText.setText(article.getSource() + " • " + article.getPublishedAt());
+
+        holder.readMoreText.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), NewsDetailActivity.class);
+            intent.putExtra("url", article.getUrl());
+            intent.putExtra("title", article.getTitle());
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override
@@ -40,12 +48,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         TextView titleText;
         TextView descriptionText;
         TextView sourceText;
+        TextView readMoreText;
 
         ViewHolder(View itemView) {
             super(itemView);
             titleText = itemView.findViewById(R.id.titleText);
             descriptionText = itemView.findViewById(R.id.descriptionText);
             sourceText = itemView.findViewById(R.id.sourceText);
+            readMoreText = itemView.findViewById(R.id.readMoreText);
         }
     }
 }
