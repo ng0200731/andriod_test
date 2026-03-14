@@ -15,6 +15,14 @@
         android:textStyle="bold"
         android:paddingBottom="8dp" />
 
+    <ImageView
+        android:id="@+id/newsImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/descriptionText"
         android:layout_width="match_parent"
