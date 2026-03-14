@@ -21,6 +21,15 @@
         android:layout_height="1dp"
         android:background="#000000" />
 
+    <Button
+        android:id="@+id/btnOpenWebApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Web App"
+        android:layout_margin="16dp"
+        android:textColor="#FFFFFF"
+        android:background="#000000" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

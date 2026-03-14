@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://newsapi.org/v2/top-headlines?country=us&apiKey=52692c2490044f5da607e13d07b062e1\")",
+      "Bash(grep -E \"\\\\.java$\")",
+      "Bash(./gradlew clean:*)",
+      "Bash(cmd //c gradlew.bat clean)"
+    ],
+    "additionalDirectories": [
+      "d:\\project\\andriod_test\\web_app"
+    ]
+  }
+}
